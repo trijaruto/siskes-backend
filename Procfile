@@ -1,1 +1,1 @@
-web: bin/siskes-backend
+web: bin\siskes-backend.exe

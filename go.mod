@@ -1,4 +1,4 @@
-module git.heroku.com/siskes-backend
+module github.com/trijaruto/siskes-backend
 
 go 1.12
 
