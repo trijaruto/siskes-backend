@@ -1,0 +1,41 @@
+#logging settings
+log:
+  filename: log_siskes.log
+  path: /var/log/siskes-backend/
+  level: DEBUG
+
+#token
+token:
+  key:  inikeyuntuktoken #mesti di encrypt
+  expired:
+    second: 86400 #expired / 1 hour
+
+#apiauthenctication
+apiauth:
+  basic: #sementara pake static dulu    
+    username: username-basic-auth-siskes #mesti di encrypt
+    password: p@ssw0rd-basic-auth-siskes #mesti di encrypt   
+
+#database settings
+database:  
+  postgresql :
+    name : postgresql
+    hostname: 10.1.35.40
+    port: 3306
+    username: postgres #mesti di encrypt
+    password: postgres #mesti di encrypt
+    schema: public
+    driver: postgresql
+    
+#micro service settings
+micro:
+  service:
+    apiloginsiskes:
+      name: apiloginsiskes
+      port: 7183
+      path: /siskes/api/login  
+      log:
+        filename: api_login_siskes.log
+        path: /var/log/siskes_backend/
+        level: DEBUG     
+    
